@@ -1,0 +1,299 @@
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+   
+html{font-family: 'Prata', serif;
+    color:ffff33;
+   
+}
+
+A 
+{text-decoration: none;}
+#background {
+background:#000000;
+    opacity: .8;
+}
+ 
+   #headerfont {
+   color: #ffff33;
+}
+
+    header h1 {
+        
+        margin: 0;
+        padding: 60px;
+       text-align: center;
+        display: flex;
+        flex-direction: column; 
+
+    }
+    header {flex-direction: row;
+
+        
+    }
+        body {
+            background: url(/Images/Map.jpg) no-repeat center center;
+                min-height: 100vh;
+                background-size: cover;
+
+        }
+
+        .right {
+            right: 0%;
+
+
+        }
+
+        .sidebar {
+            height: 400px;
+            width: 150px;
+            position: fixed;
+            top: 200px;
+            left: 0;
+            padding-top: 10px;
+            background-color: #000000;
+            opacity:.7;
+            }
+            
+            .sidebar div {
+            padding: 8px;
+            font-size: 24px;
+            display: block;
+            }
+            
+            .body-text {
+            margin-left: 150px;
+            font-size: 18px;   
+            }
+                /*Blog*/
+    .wrapper {
+        display: flex
+        flex-direction: column;
+        margin-left: 170px;
+        margin-right: 210px;
+        }
+
+    li {
+        list-style: none;
+
+    } 
+
+    article {
+        padding: 15px;
+        margin: 15px 0;
+   }
+               article {
+               background:white;
+               
+               }
+               .articlebackground
+               {
+                   color: black;
+               }
+img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    }
+.accordion {
+    max-width: 400px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    overflow: hidden;
+    background:black;
+    position: absolute;
+    right: 0px;
+    top: 200px;
+    color: yellow;
+}
+
+.accordion__label,
+.accordion__content {
+    padding: 14px 20px;
+}
+.accordion__label {
+    display: block;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    transition: background 0.1s;
+}
+.accordion__label:hover {
+    background:grey;
+
+}
+.accordion__label::after{
+    content: "";
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    right: 20px;
+    width: 12px;
+    height: 6px;
+    background-image: url('data:image/svg+xml;utf8,<svg width="100" height="50" xmlns="http://www.w3.org/2000/svg"><polygon points="0,0 100,0 50,50" style="fill:%23FFFFFF99;" /></svg>');
+background-size: contain;
+transition: transform 0.4s;
+color: yellow;
+}
+.accordion__content{
+    background:yellow;
+    line-height: 1.6;
+    display: none;
+    color: black;
+
+    
+}
+
+.accordion__input {
+    display: none;
+
+}
+.accordion__input:checked ~ .accordion__content {
+    display: block;
+}
+.accordion__input:checked ~ .accordion__label::after{
+    transform: translateY(-50%) rotate(0.5turn):
+}
+{
+margin: 0;
+padding:0;
+box-sizing: border-box;
+}
+    body
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+}   
+
+    .clock
+{width: 150px;
+    height: 150px;
+    background: url(/Images/golden\ clockface.png);
+    background-size: cover;
+    position: relative;
+    margin: 0 auto;
+    bottom: 150px;
+    left: 230px;
+
+    }
+    .clock:before
+    {
+        content: '';
+        position: absolute;
+        left: 71px;
+        top: 75px;
+        width: 5px;
+        height: 5px;
+        background: #B9F030;
+        border-radius: 50%;
+        z-index: 10000;
+    }
+
+    .clock .hour {    
+    background: lightgreen;
+    position: absolute;
+    width: 3px;
+    height: 32.5px;
+    left: 72px;
+    top: 45px;
+    transform-origin: center bottom;
+}   .clock .sec {
+    background: lightgreen;
+    position: absolute;
+    width: 1px;
+    height: 40px;
+    left: 73px;
+    top: 37.5px;
+    transform-origin: center bottom;
+}   .clock .min {
+    background: lightgreen;
+    position: absolute;
+    width: 2px;
+    height: 40px;
+    left: 71.5px;
+    top: 37.5px;
+    transform-origin: center bottom;
+
+
+
+    }
+
+
+}
+
+
+}
+
+  
+/*     
+        .clock .hour,
+        .clock .min,
+        .clock .sec
+{
+    position: absolute;
+}
+.clock .hour, .hr
+{
+width: 50px;
+height: 50px;
+}
+.clock .min, .mn
+{
+width: 60px;
+height: 60px;
+}
+.clock .sec, .sc
+{
+width: 80px;
+height: 80px;
+}
+.hr, mn, .sc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    border-radius: 50%;
+    }
+    .hr:before
+    {
+        content: '';
+        position: absolute;
+        left: 72px;
+        top: 20px;
+        width: 4px;
+        height: 50px;
+        background: #B7F51D;
+        z-index: 10;
+        border-radius: 6px  6px  0 0;
+    } 
+        .mn:before
+        {
+            content: '';
+            width: 4px;
+            height: 30px;
+            background: #B7F51D;
+            z-index: 11;
+            border-radius: 6px  6px  0 0;
+    }
+    .sc:before
+        {
+            content: '';
+            position: absolute;
+            right: 5px;
+            bottom:1px;
+            width: 2px;
+            height: 60px;
+            background: #B7F51D;
+            z-index: 12;
+            border-radius: 6px  6px  0 0;
+    }
+        @media (min-width:1000px) { body{
+        max-width: 1600px;
+        margin: 0 auto;
+    
+    }
+     */
