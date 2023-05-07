@@ -5,8 +5,7 @@ html, body {
 }
    
 html{font-family: 'Prata', serif;
-    color:ffff33;
-   
+    color:ffff33;   
 }
 
 A 
@@ -26,15 +25,14 @@ background:#000000;
         padding: 60px;
        text-align: center;
         display: flex;
-        flex-direction: column; 
-
+        flex-direction: column;     
     }
     header {flex-direction: row;
 
         
     }
         body {
-            background: url(/Images/Map.jpg) no-repeat center center;
+            background: url("https://i.ibb.co/rk9Bt8y/Map.jpg") no-repeat center center;
                 min-height: 100vh;
                 background-size: cover;
 
@@ -42,14 +40,12 @@ background:#000000;
 
         .right {
             right: 0%;
-
-
         }
 
         .sidebar {
             height: 400px;
             width: 150px;
-            position: fixed;
+            position: absolute;
             top: 200px;
             left: 0;
             padding-top: 10px;
@@ -97,6 +93,7 @@ img {
     height: auto;
     object-fit: contain;
     }
+      /*accordion*/   
 .accordion {
     max-width: 400px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -142,8 +139,6 @@ color: yellow;
     line-height: 1.6;
     display: none;
     color: black;
-
-    
 }
 
 .accordion__input {
@@ -156,32 +151,31 @@ color: yellow;
 .accordion__input:checked ~ .accordion__label::after{
     transform: translateY(-50%) rotate(0.5turn):
 }
-{
-margin: 0;
+
+margin: 0;{
 padding:0;
 box-sizing: border-box;
 }
-    body
-    {
+    body{
         display: flex;
         justify-content: center;
         align-items: center;
         min-height: 100vh;
 }   
-
+          /*clock*/
     .clock
 {width: 150px;
     height: 150px;
-    background: url(/Images/golden\ clockface.png);
+    background: url(https://i.ibb.co/1Tn9TwK/golden-clockface.png);
     background-size: cover;
-    position: relative;
+    position: absolute;
     margin: 0 auto;
-    bottom: 150px;
-    left: 230px;
-
+    bottom: 570px;
+    left: 930px;
+    
+        
     }
-    .clock:before
-    {
+    .clock:before{
         content: '';
         position: absolute;
         left: 71px;
@@ -194,7 +188,7 @@ box-sizing: border-box;
     }
 
     .clock .hour {    
-    background: lightgreen;
+    background: gold;
     position: absolute;
     width: 3px;
     height: 32.5px;
@@ -202,7 +196,7 @@ box-sizing: border-box;
     top: 45px;
     transform-origin: center bottom;
 }   .clock .sec {
-    background: lightgreen;
+    background: gold;
     position: absolute;
     width: 1px;
     height: 40px;
@@ -210,90 +204,63 @@ box-sizing: border-box;
     top: 37.5px;
     transform-origin: center bottom;
 }   .clock .min {
-    background: lightgreen;
+    background: gold;
     position: absolute;
     width: 2px;
     height: 40px;
     left: 71.5px;
     top: 37.5px;
     transform-origin: center bottom;
-
-
-
-    }
-
-
 }
 
-
+footer {
+  background-color: #ffff33;
+  width: 100%;
+  position: absolute;
 }
 
-  
-/*     
-        .clock .hour,
-        .clock .min,
-        .clock .sec
-{
-    position: absolute;
+.footer__social--list {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
 }
-.clock .hour, .hr
-{
-width: 50px;
-height: 50px;
+
+.footer__row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5% 0;
 }
-.clock .min, .mn
-{
-width: 60px;
-height: 60px;
+.footer__logo--img {
+  width: 100px;
+  height: 100px;
 }
-.clock .sec, .sc
-{
-width: 80px;
-height: 80px;
+
+.footer__social--link,
+.footer_copyright,
+.footer__logo--popper,
+.footer__copy {
+  color: black;
 }
-.hr, mn, .sc{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    border-radius: 50%;
-    }
-    .hr:before
-    {
-        content: '';
-        position: absolute;
-        left: 72px;
-        top: 20px;
-        width: 4px;
-        height: 50px;
-        background: #B7F51D;
-        z-index: 10;
-        border-radius: 6px  6px  0 0;
-    } 
-        .mn:before
-        {
-            content: '';
-            width: 4px;
-            height: 30px;
-            background: #B7F51D;
-            z-index: 11;
-            border-radius: 6px  6px  0 0;
-    }
-    .sc:before
-        {
-            content: '';
-            position: absolute;
-            right: 5px;
-            bottom:1px;
-            width: 2px;
-            height: 60px;
-            background: #B7F51D;
-            z-index: 12;
-            border-radius: 6px  6px  0 0;
-    }
-        @media (min-width:1000px) { body{
-        max-width: 1600px;
-        margin: 0 auto;
-    
-    }
-     */
+
+.footer__logo--popper {
+  position: absolute;
+  right: 0;
+  top: 30px;
+  font-weight: 700;
+  opacity: 0;
+  transition: all 300ms ease;
+}
+
+.footer__anchor {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.footer__anchor:hover .footer__logo--popper {
+  transform: translateX(60px);
+  opacity: 1;
+}
